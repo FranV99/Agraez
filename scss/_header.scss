@@ -1,0 +1,75 @@
+@import "colores";
+
+header {
+  padding: 10px;
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 60px -35px;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+
+  #logo-header {
+    width: 150px;
+    display: block;
+    margin: auto;
+  }
+
+  ul {
+    list-style: none;
+    text-align: center;
+    margin-top: 20px;
+
+    li {
+      display: inline-block;
+      margin-top: 10px;
+      a {
+        text-decoration: none;
+        color: $voscuro;
+        padding: 10px;
+        transition: 0.5s;
+        &:hover{
+          border-bottom: 3px solid $voscuro;
+        }
+      }
+      
+    }
+  }
+
+  #log-reg-buttons {
+    padding: 10px;
+    text-align: center;
+
+    a {
+      display: inline-block;
+      text-decoration: none;
+      margin: 5px;
+      color: #fff;
+      border-radius: 8px;
+      padding: 10px;
+      transition: 0.5s;
+    }
+    #login-button {
+      border: 3px solid $voscuro;
+      background-color: $voscuro;
+      &:hover {
+        background-color: white;
+        color: $voscuro;
+        transition: 0.5s;
+      }
+    }
+
+    #register-button {
+      color: $voscuro;
+      border: 3px solid #fff;
+      background-color: #fff;
+      padding: 10px 20px 10px 17px;
+      
+      &:hover {
+        border: 3px solid $voscuro;
+        background-color: $voscuro;
+        color: #fff;
+        transition: 0.5s;
+      }
+    }
+  }
+}

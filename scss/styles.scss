@@ -1,0 +1,19 @@
+@import "header";
+@import "section";
+@import "footer";
+@import "login-register";
+@import "admin_page";
+
+html{
+    margin: 0;
+    padding: 0;
+}
+
+*{
+    font-family: 'Poppins';
+}
+body{
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+

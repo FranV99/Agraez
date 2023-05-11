@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agráez - Admin - Encargos</title>
+    <link rel="stylesheet" href="../../css/styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../../fontawesome/css/all.css" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div id="admin-page">
+      <div class="container-flex">
+        <div class="row">
+          <div class="col">
+            <h3>Encargos</h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col col-sm-2" id="profile-menu">
+            <div class="row">
+              <div class="col">
+                <img src="../../img/user.webp" alt="" />
+                <div id="nombreUsuario">Admin</div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col" id="opciones-menu">
+                <a href="../admin/servicios.html">Servicios</a>
+                <a href="../admin/trabajadores.html">Trabajadores</a>
+                <a href="../admin/clientes.html">Clientes</a>
+                <a href="../admin/encargos.html" style="background-color: orange;">Encargos</a>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col" id="footer-menu">
+                <a href=""><i class="fa-solid fa-gear"></i></a>
+                <a href="../../index.html"
+                  ><i class="fa-solid fa-right-from-bracket"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+          <div class="col col-sm-10" id="content">
+            <div id="encargos">
+              <h4>Lista de encargos pendientes</h4>
+                <div id="tabla-encargos-pendientes">
+                    <table>
+                        <thead>
+                        <tr id="fila1">
+                            <th>ID</th>
+                            <th>ID Cliente</th>
+                            <th>Nombre cliente</th>
+                            <th>Apellidos Cliente</th>
+                            <th>Servicios</th>
+                            <th>ID Trabajadores</th>
+                            <th>Fecha Inicio</th>
+                            <th>Fecha Fin</th>
+                            <th>Estado</th>
+                        </tr>
+                        </thead>
+                        <tbody id="tbody-encargos-pendientes">
+                        <tr>
+                            <td>4</td>
+                            <td>92747142Z</td>
+                            <td>Jeremy</td>
+                            <td>Mangekyo Sharingan</td>
+                            <td>
+                                Poda
+                            </td>
+                            <td>
+                                Añadir
+                            </td>
+                            <td>10-5-2023</td>
+                            <td></td>
+                            <td>Pendiente</td>
+                            <td>
+                              <a href="" id="aceptarEncargo"><i class="fa-solid fa-check"></i></a>
+                              <a href="" id="rechazarEncargo"><i class="fa-solid fa-xmark"></i></a>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <br>
+                <h4>Lista de encargos aceptados</h4>
+                <div id="tabla-encargos-aceptados">
+                    <table>
+                        <thead>
+                        <tr id="fila1">
+                            <th>ID</th>
+                            <th>ID Cliente</th>
+                            <th>Nombre cliente</th>
+                            <th>Apellidos Cliente</th>
+                            <th>Servicios</th>
+                            <th>ID Trabajadores</th>
+                            <th>Fecha Inicio</th>
+                            <th>Fecha Fin</th>
+                            <th>Estado</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>3</td>
+                            <td>12347142S</td>
+                            <td>Elba</td>
+                            <td>Sado</td>
+                            <td>
+                                Poda
+                            </td>
+                            <td>
+                                <li>81929381F</li>
+                                <li>10293910Z</li>
+                                <li>83910138X</li>
+                            </td>
+                            <td>10-5-2023</td>
+                            <td>20-5-2023</td>
+                            <td>Aceptado</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+              <br />
+              <h4>Lista de encargos rechazados</h4>
+                <div id="tabla-encargos-rechazados">
+                    <table>
+                        <thead>
+                        <tr id="fila1">
+                            <th>ID</th>
+                            <th>ID Cliente</th>
+                            <th>Nombre cliente</th>
+                            <th>Apellidos Cliente</th>
+                            <th>Servicios</th>
+                            <th>ID Trabajadores</th>
+                            <th>Fecha Inicio</th>
+                            <th>Fecha Fin</th>
+                            <th>Estado</th>
+                            <th>Razón</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>2</td>
+                            <td>67847342P</td>
+                            <td>Mateo</td>
+                            <td>Bachata</td>
+                            <td>
+                                Poda
+                            </td>
+                            <td>
+              
+                            </td>
+                            <td>12-5-2023</td>
+                            <td></td>
+                            <td>Rechazado</td>
+                            <td>No hay suficiente personal</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <br>
+                <h4>Lista de encargos finalizados</h4>
+                <div id="tabla-encargos-finalizados">
+                    <table>
+                        <thead>
+                        <tr id="fila1">
+                            <th>ID</th>
+                            <th>ID Cliente</th>
+                            <th>Nombre cliente</th>
+                            <th>Apellidos Cliente</th>
+                            <th>Servicios</th>
+                            <th>ID Trabajadores</th>
+                            <th>Fecha Inicio</th>
+                            <th>Fecha Fin</th>
+                            <th>Estado</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>12347142S</td>
+                            <td>Elba</td>
+                            <td>Sado</td>
+                            <td>
+                                Poda
+                            </td>
+                            <td>
+                                <li>10293910Z</li>
+                                <li>83910138X</li>
+                            </td>
+                            <td>1-5-2023</td>
+                            <td>10-5-2023</td>
+                            <td>Finalizado</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <br>
+              <h4>Añadir encargo</h4>
+              <form id="nuevoEncargo">
+                <div class="row">
+                  <div class="col col-sm-3">
+                    <label for="id">ID</label>
+                    <br>
+                    <input type="number" id="idEncargo" name="idEncargo" disabled/>
+                  </div>
+                  <div class="col col-sm-3">
+                    <label for="id">ID Cliente</label>
+                    <br>
+                    <input type="number" id="idClienteEncargo" name="idClienteEncargo"/>
+                  </div>
+                  <div class="col col-sm-3">
+                    <label for="nombreCliente">Nombre cliente</label>
+                    <br>
+                    <input type="text" id="nombreClienteEncargo" name="nombreClienteEncargo" />
+                  </div>
+                  <div class="col col-sm-3">
+                    <label for="apellidosClienteEncargo">Apellidos</label>
+                    <input type="text" id="apellidosClienteEncargo" name="apellidosClienteEncargo" />
+                  </div>
+                  <div class="col col-sm-3">
+                    <label for="serviciosClienteEncargo">Servicios</label>
+                    <br>
+                    <ul id="serviciosClienteEncargo" style="list-style: none;">
+                        <li>
+                          <label><input type="checkbox" name="servicios" value="Poda"> Poda</label>
+                        </li>
+                        <li>
+                          <label><input type="checkbox" name="servicios" value="Injerto"> Injerto</label>
+                        </li>
+                        <li>
+                          <label><input type="checkbox" name="servicios" value="Fumigación"> Fumigación</label>
+                        </li>
+                        <li>
+                          <label><input type="checkbox" name="servicios" value="Recogida"> Recogida</label>
+                        </li>
+                    </ul>
+                  </div>
+                  <div class="col col-sm-3">
+                    <label for="idTrabajadorEncargo">ID trabajadores</label>
+                    <br>
+                    <ul id="idTrabajadorEncargo" style="list-style: none;">
+                      <li>
+                        <label><input type="checkbox" name="trabajadores" value="48918123Y"> 48918123Y - Antonio Recio</label>
+                      </li>
+                      <li>
+                        <label><input type="checkbox" name="trabajadores" value="78218121X"> 78218121X - Susana Horia</label>
+                      </li>
+                      <li>
+                        <label><input type="checkbox" name="trabajadores" value="18517201P"> 18517201P - German Garmendia</label>
+                      </li>
+                      <li>
+                        <label><input type="checkbox" name="trabajadores" value="98618179U"> 98618179U - Elpo Jhon</label>
+                      </li>
+                  </ul>
+                  </div>
+                  <div class="col col-sm-3">
+                    <label for="fechaInicioEncargo">Fecha inicio</label>
+                    <br>
+                    <input type="date" id="fechaInicioEncargo" name="fechaInicioEncargo"></input>
+                  </div>
+                  <div class="col col-sm-3">
+                    <label for="fechaFinEncargo">Fecha fin (Opcional)</label>
+                    <br>
+                    <input type="date" id="fechaFinEncargo" name="fechaFinEncargo"></input>
+                  </div>
+                  <div class="col col-sm-3">
+                    <label for="estadoEncargo">Estado</label>
+                    <br>
+                    <input type="text" id="estadoEncargo" name="estadoEncargo" placeholder="Pendiente" disabled></input>
+                  </div>
+                </div>
+                <br>
+                <input type="submit" value="Añadir" id="enviar" />
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col" id="footer">footer</div>
+        </div>
+      </div>
+    </div>
+    <script src="../../js/add_encargo.js"></script>
+  </body>
+</html>

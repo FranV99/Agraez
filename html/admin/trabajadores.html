@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agráez - Admin - Trabajadores</title>
+    <link rel="stylesheet" href="../../css/styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../../fontawesome/css/all.css" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div id="admin-page">
+      <div class="container-flex">
+        <div class="row">
+          <div class="col">
+            <h3>Trabajadores</h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col col-sm-2" id="profile-menu">
+            <div class="row">
+              <div class="col">
+                <img src="../../img/user.webp" alt="" />
+                <div id="nombreUsuario">Admin</div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col" id="opciones-menu">
+                <a href="../admin/servicios.html">Servicios</a>
+                <a href="../admin/trabajadores.html" style="background-color: orange;">Trabajadores</a>
+                <a href="../admin/clientes.html">Clientes</a>
+                <a href="../admin/encargos.html">Encargos</a>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col" id="footer-menu">
+                <a href=""><i class="fa-solid fa-gear"></i></a>
+                <a href="../../index.html"
+                  ><i class="fa-solid fa-right-from-bracket"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+          <div class="col col-sm-10" id="content">
+            <div id="trabajadores">
+              <h4>Lista de trabajadores</h4>
+              <div id="tabla-trabajadores">
+                <table>
+                    <thead>
+                      <tr id="fila1">
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Apellidos</th>
+                        <th>Teléfono</th>
+                        <th>Correo</th>
+                        <th>Departamento</th>
+                        <th>Puesto</th>
+                        <th>Estado</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>48727542H</td>
+                        <td>Manuel</td>
+                        <td>García Aguado</td>
+                        <td>666777888</td>
+                        <td>manuel@gmail.com</td>
+                        <td>Márketing</td>
+                        <td>Empleado</td>
+                        <td>Activo</td>
+                      </tr>
+                    </tbody>
+                  </table>
+              </div>
+              <br />
+              <h4>Añadir trabajador</h4>
+              <form id="nuevoTrabajador">
+                <div class="row">
+                  <div class="col col-sm-3">
+                    <label for="id">ID:</label>
+                    <br>
+                    <input type="number" id="idTrabajador" name="idTrabajador"/>
+                  </div>
+                  <div class="col col-sm-3">
+                    <label for="nombreTrabajador">Nombre:</label>
+                    <br>
+                    <input type="text" id="nombreTrabajador" name="nombreTrabajador" />
+                  </div>
+                  <div class="col col-sm-3">
+                    <label for="apellidosTrabajador">Apellidos</label>
+                    <input type="text" id="apellidosTrabajador" name="apellidosTrabajador" />
+                  </div>
+                  <div class="col col-sm-3">
+                    <label for="telefonoTrabajador">Telefono:</label>
+                    <br>
+                    <input type="number" id="telefonoTrabajador" name="telefonoTrabajador"></input>
+                  </div>
+                  <div class="col">
+                    <label for="correoTrabajador">Correo:</label>
+                    <br>
+                    <input type="email" id="correoTrabajador" name="correoTrabajador"></input>
+                  </div>
+                  <div class="col">
+                    <label for="departamentoTrabajador">Departamento</label>
+                    <br>
+                    <input type="text" id="departamentoTrabajador" name="departamentoTrabajador" />
+                  </div>
+                  <div class="col">
+                    <label for="puestoTrabajador">Puesto</label>
+                    <br>
+                    <input type="text" id="puestoTrabajador" name="puestoTrabajador" />
+                  </div>
+                  <div class="col">
+                    <label for="estadoTrabajador">Estado</label>
+                    <br>
+                    <input type="text" id="estadoTrabajador" name="estadoTrabajador" />
+                  </div>
+                </div>
+                <input type="submit" value="Añadir" id="enviar" />
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col" id="footer">footer</div>
+        </div>
+      </div>
+    </div>
+    <script src="../../js/add_trabajadores.js"></script>
+  </body>
+</html>
