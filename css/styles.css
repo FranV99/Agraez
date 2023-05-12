@@ -549,6 +549,7 @@ footer #social {
 
 #admin-page {
   color: #fff;
+  overflow-x: hidden;
 }
 #admin-page #nombreUsuario {
   text-align: center;
@@ -558,6 +559,7 @@ footer #social {
   text-align: center;
   background-color: #fb5711;
   margin: 0;
+  padding: 10px;
 }
 #admin-page #profile-menu {
   background-color: #fb5711;
@@ -586,7 +588,7 @@ footer #social {
 }
 #admin-page #profile-menu #footer-menu {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
 }
 #admin-page #profile-menu #footer-menu a {
   text-decoration: none;
@@ -676,7 +678,7 @@ footer #social {
 }
 #admin-page #encargos {
   text-align: left;
-  margin: 10px;
+  margin: 20px;
   height: 100%;
 }
 #admin-page #encargos #tabla-encargos-pendientes,
