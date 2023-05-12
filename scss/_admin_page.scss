@@ -125,7 +125,8 @@
 
     #tabla-encargos-pendientes,
     #tabla-encargos-aceptados,
-    #tabla-encargos-finalizados {
+    #tabla-encargos-finalizados,
+    #tabla-encargos-rechazados {
       max-height: 300px;
       overflow: auto;
     }
@@ -196,12 +197,14 @@
   }
 
   #aceptarEncargo,
-  #rechazarEncargo{
+  #rechazarEncargo,
+  #finalizadoEncargo{
     font-size: 30px;
     margin: 5px;
   }
 
-  #aceptarEncargo{
+  #aceptarEncargo,
+  #finalizadoEncargo{
     color: lightgreen;
   }
   #rechazarEncargo{

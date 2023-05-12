@@ -1,7 +1,6 @@
 const form = document.getElementById("nuevoCliente");
 const tableBody = document.querySelector("table tbody");
 
-
 form.addEventListener("submit", (event) => {
   event.preventDefault(); // Evitar que el formulario se envíe
 
@@ -41,9 +40,17 @@ form.addEventListener("submit", (event) => {
     const descripcionCell = row.insertCell();
     descripcionCell.textContent = descripcion;
 
-    descripcionCell.scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });
-
+    descripcionCell.scrollIntoView({
+      behavior: "smooth",
+      block: "end",
+      inline: "nearest",
+    });
   } else {
-    alert("Rellena todos los campos.");
+    const alertMensaje = document.querySelector(".alert");
+    alertMensaje.classList.remove("d-none"); // muestra el mensaje
+
+    setTimeout(() => {
+      alertMensaje.classList.add("d-none"); // oculta el mensaje después de 5 segundos
+    }, 5000);
   }
 });

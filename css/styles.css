@@ -681,7 +681,8 @@ footer #social {
 }
 #admin-page #encargos #tabla-encargos-pendientes,
 #admin-page #encargos #tabla-encargos-aceptados,
-#admin-page #encargos #tabla-encargos-finalizados {
+#admin-page #encargos #tabla-encargos-finalizados,
+#admin-page #encargos #tabla-encargos-rechazados {
   max-height: 300px;
   overflow: auto;
 }
@@ -765,11 +766,13 @@ footer #social {
   border-radius: 50%;
 }
 #admin-page #aceptarEncargo,
-#admin-page #rechazarEncargo {
+#admin-page #rechazarEncargo,
+#admin-page #finalizadoEncargo {
   font-size: 30px;
   margin: 5px;
 }
-#admin-page #aceptarEncargo {
+#admin-page #aceptarEncargo,
+#admin-page #finalizadoEncargo {
   color: lightgreen;
 }
 #admin-page #rechazarEncargo {

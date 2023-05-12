@@ -49,13 +49,11 @@ form.addEventListener("submit", (event) => {
 
   const fechaFin = document.getElementById("fechaFinEncargo").value;
 
-  const fechaF = new Date(fechaFin);
-  const diaF = fechaF.getDate();
-  const mesF = fechaF.getMonth() + 1;
-  const anioF = fechaF.getFullYear();
+  const fechaF = fechaFin ? new Date(fechaFin) : "";
+  const diaF = fechaF ? fechaF.getDate() : "00";
+  const mesF = fechaF ? fechaF.getMonth() + 1 : "00";
+  const anioF = fechaF ? fechaF.getFullYear() : "0000";
   const fechaFormateadaF = `${diaF}-${mesF}-${anioF}`;
-
-  const estado = document.getElementById("estadoEncargo").value;
 
   const serviciosCheckbox = document.querySelectorAll(
     "input[type=checkbox][name=servicios]:checked"
@@ -108,11 +106,7 @@ form.addEventListener("submit", (event) => {
     fechaInicioCell.textContent = fechaFormateadaI;
 
     const fechaFinCell = row.insertCell();
-    if (fechaFinCell.textContent !== "") {
-      fechaFinCell.textContent = fechaFormateadaF;
-    } else {
-      fechaFinCell.textContent = "";
-    }
+    fechaFinCell.textContent = fechaFormateadaF;
 
     const estadoCell = row.insertCell();
     estadoCell.textContent = "Pendiente";
@@ -127,42 +121,89 @@ form.addEventListener("submit", (event) => {
 
     aceptarEncargoLink.addEventListener("click", (event) => {
       const fila = event.target.closest("tr");
-      // Crear una nueva fila en la tabla de encargos-aceptados
-      const nuevaFila = document.createElement("tr");
-      nuevaFila.innerHTML = `
-    <td>${id}</td>
-    <td>${idCliente}</td>
-    <td>${nombre}</td>
-    <td>${apellidos}</td>
-    <td>
-    <ul>
-      ${serviciosSeleccionados
-        .map((servicio) => `<li>${servicio}</li>`)
-        .join("")}
-    </ul>
-    </td>
-    <td>
-    <ul>
-    ${trabajadoresSeleccionados
-      .map((trabajador) => `<li>${trabajador}</li>`)
-      .join("")}
-    </ul>
-    </td>
-    <td>${fechaInicio}</td>
-    <td>${fechaFin}</td>
-    <td>Aceptado</td>
-  `;
-      const tablaAceptados = document.getElementById(
-        "tabla-encargos-aceptados"
-      );
-      tablaAceptados.appendChild(nuevaFila);
-      const tbodyAceptados = tablaAceptados.querySelector("tbody");
 
-      tbodyAceptados.appendChild(nuevaFila);
+      const confirmacion = confirm("¿Aceptar encargo?");
+      if (confirmacion) {
+        // Crear una nueva fila en la tabla de encargos-aceptados
+        const nuevaFila = document.createElement("tr");
+        nuevaFila.innerHTML = `
+        <td>${id}</td>
+        <td>${idCliente}</td>
+        <td>${nombre}</td>
+        <td>${apellidos}</td>
+        <td>
+        <ul>
+          ${serviciosSeleccionados
+            .map((servicio) => `<li>${servicio}</li>`)
+            .join("")}
+        </ul>
+        </td>
+        <td>
+        <ul>
+        ${trabajadoresSeleccionados
+          .map((trabajador) => `<li>${trabajador}</li>`)
+          .join("")}
+        </ul>
+          </td>
+          <td>${fechaFormateadaI}</td>
+          <td>${fechaFormateadaF}</td>
+          <td>Aceptado</td>
+          <td><a href="#" id='finalizadoEncargo' class="completadoLink"><i class='fa-solid fa-calendar-check'></i></a></td>
+      `;
+        const tablaAceptados = document.getElementById(
+          "tabla-encargos-aceptados"
+        );
+        tablaAceptados.appendChild(nuevaFila);
+        const tbodyAceptados = tablaAceptados.querySelector("tbody");
+        tbodyAceptados.appendChild(nuevaFila);
 
-      // Eliminar la fila original de la tabla de encargos-pendientes
-      fila.remove();
+        // Eliminar la fila original de la tabla de encargos-pendientes
+        fila.remove();
+
+        //Agregar evento al link de completado
+        const completadoLink = nuevaFila.querySelector(".completadoLink");
+        completadoLink.addEventListener("click", (event) => {
+          const fila = event.target.closest("tr");
+          const confirmacion = confirm("Confirmar finalización de encargo");
+          if (confirmacion) {
+            const nuevaFila = document.createElement("tr");
+            nuevaFila.innerHTML = `
+          <td>${id}</td>
+          <td>${idCliente}</td>
+          <td>${nombre}</td>
+          <td>${apellidos}</td>
+          <td>
+            <ul>
+              ${serviciosSeleccionados
+                .map((servicio) => `<li>${servicio}</li>`)
+                .join("")}
+            </ul>
+          </td>
+          <td>
+            <ul>
+              ${trabajadoresSeleccionados
+                .map((trabajador) => `<li>${trabajador}</li>`)
+                .join("")}
+            </ul>
+          </td>
+          <td>${fechaFormateadaI}</td>
+          <td>${fechaFormateadaF}</td>
+          <td>Finalizado</td>
+        `;
+            const tablaFinalizados = document.getElementById(
+              "tabla-encargos-finalizados"
+            );
+            tablaFinalizados.appendChild(nuevaFila);
+            const tbodyFinalizados = tablaFinalizados.querySelector("tbody");
+            tbodyFinalizados.appendChild(nuevaFila);
+
+            // Eliminar la fila original de la tabla de encargos-aceptados
+            fila.remove();
+          }
+        });
+      }
     });
+
     accionesCell.appendChild(aceptarEncargoLink);
 
     const rechazarEncargoLink = document.createElement("a");
@@ -173,7 +214,52 @@ form.addEventListener("submit", (event) => {
     rechazarEncargoLink.href = "#";
 
     rechazarEncargoLink.addEventListener("click", (event) => {
-      alert("rechazado");
+      const fila = event.target.closest("tr");
+
+      // Preguntar al usuario por la explicación del rechazo
+      const explicacion = prompt(
+        "¿Por qué se rechaza este encargo? (Obligatorio)"
+      );
+
+      // Si el usuario ingresó un texto válido
+      if (explicacion && explicacion.trim() !== "") {
+        // Crear una nueva fila en la tabla de encargos rechazados
+        const nuevaFila = document.createElement("tr");
+        nuevaFila.innerHTML = `
+          <td>${id}</td>
+          <td>${idCliente}</td>
+          <td>${nombre}</td>
+          <td>${apellidos}</td>
+          <td>
+            <ul>
+              ${serviciosSeleccionados
+                .map((servicio) => `<li>${servicio}</li>`)
+                .join("")}
+            </ul>
+          </td>
+          <td>
+            <ul>
+              ${trabajadoresSeleccionados
+                .map((trabajador) => `<li>${trabajador}</li>`)
+                .join("")}
+            </ul>
+          </td>
+          <td>${fechaFormateadaI}</td>
+          <td>${fechaFormateadaF}</td>
+          <td>Rechazado</td>
+          <td>${explicacion}</td>
+        `;
+        const tablaRechazados = document.getElementById(
+          "tabla-encargos-rechazados"
+        );
+        tablaRechazados.appendChild(nuevaFila);
+        const tbodyRechazados = tablaRechazados.querySelector("tbody");
+        if (tbodyRechazados) {
+          tbodyRechazados.appendChild(nuevaFila);
+        }
+        // Eliminar la fila original de la tabla de encargos-pendientes
+        fila.remove();
+      }
     });
     accionesCell.appendChild(rechazarEncargoLink);
 
@@ -187,6 +273,11 @@ form.addEventListener("submit", (event) => {
     idInput.placeholder = `${ultimoId}`;
     idInput.value = "";
   } else {
-    alert("Rellena todos los campos.");
+    const alertMensaje = document.querySelector(".alert");
+    alertMensaje.classList.remove("d-none"); // muestra el mensaje
+
+    setTimeout(() => {
+      alertMensaje.classList.add("d-none"); // oculta el mensaje después de 5 segundos
+    }, 5000);
   }
 });

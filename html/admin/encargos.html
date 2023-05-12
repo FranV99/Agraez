@@ -127,6 +127,9 @@
                             <td>10-5-2023</td>
                             <td>20-5-2023</td>
                             <td>Aceptado</td>
+                            <td>
+                              <a href="" id="finalizadoEncargo"><i class="fa-solid fa-calendar-check"></i></a>
+                            </td>
                         </tr>
                         </tbody>
                     </table>
@@ -207,6 +210,9 @@
                     </table>
                 </div>
                 <br>
+                <div class="alert alert-danger d-none" role="alert">
+                  Rellena todos los campos.
+                </div>                
               <h4>Añadir encargo</h4>
               <form id="nuevoEncargo">
                 <div class="row">
@@ -218,7 +224,7 @@
                   <div class="col col-sm-3">
                     <label for="id">ID Cliente</label>
                     <br>
-                    <input type="number" id="idClienteEncargo" name="idClienteEncargo"/>
+                    <input type="text" id="idClienteEncargo" name="idClienteEncargo"/>
                   </div>
                   <div class="col col-sm-3">
                     <label for="nombreCliente">Nombre cliente</label>
@@ -227,6 +233,7 @@
                   </div>
                   <div class="col col-sm-3">
                     <label for="apellidosClienteEncargo">Apellidos</label>
+                    <br>
                     <input type="text" id="apellidosClienteEncargo" name="apellidosClienteEncargo" />
                   </div>
                   <div class="col col-sm-3">
@@ -275,7 +282,7 @@
                     <br>
                     <input type="date" id="fechaFinEncargo" name="fechaFinEncargo"></input>
                   </div>
-                  <div class="col col-sm-3">
+                  <div class="col col-sm-2">
                     <label for="estadoEncargo">Estado</label>
                     <br>
                     <input type="text" id="estadoEncargo" name="estadoEncargo" placeholder="Pendiente" disabled></input>
