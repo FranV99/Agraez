@@ -1,14 +1,17 @@
 section {
   z-index: 0;
   margin-top: 20px;
+  
   h2,
   h3 {
     text-align: center;
     padding: 10px;
   }
 }
+
 #section-img {
   margin-top: 0;
+  
   .parallax {
     background-image: url(../img/macetas.jpg);
     height: 400px;
@@ -16,21 +19,21 @@ section {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-
+    
     display: flex;
     align-items: center;
     justify-content: center;
-
-    div{
+    
+    div {
       font-size: 300%;
       color: #fff;
       max-width: 100%;
-      text-shadow: 3px 1px 8px rgba(0,0,0,0.7);
+      text-shadow: 3px 1px 8px rgba(0, 0, 0, 0.7);
     }
-
-    @media (max-width: 545px){
-      div{
-        margin-left: 120px;
+    
+    @media (max-width: 545px) {
+      div {
+        margin-left: 50px; /* Cambiado de 120px a 0 */
       }
     }
   }
@@ -41,33 +44,35 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
-
+  
   img {
-     max-width: 100%;
-     max-height: 100%;
+    max-width: 100%;
+    max-height: 100%;
   }
+  
   p {
     margin-top: 10px;
     text-align: left;
-
   }
 }
 
-#section-services { 
+#section-services {
   .cards-services {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 20px;
+    
     .card {
       margin-bottom: 20px;
       min-height: 500px;
-
-      img{
+      
+      img {
         height: 200px;
         object-fit: cover;
       }
     }
+    
     a {
       text-decoration: none;
       background-color: $voscuro;
@@ -83,24 +88,27 @@ section {
         background-color: #fff;
       }
     }
-    .card-body{
+    
+    .card-body {
       margin-top: 10px;
     }
   }
-
-  @media (max-width: 545px){
-    .cards-services{
-      margin-left: 120px;
+  
+  @media (max-width: 545px) {
+    .cards-services {
+      margin-left: 25px; /* Cambiado de 120px a 0 */
     }
   }
 }
 
-#section-faqs{
+#section-faqs {
   text-align: left;
   margin-left: 20px;
-  details{
+  
+  details {
     padding: 10px;
-    div{
+    
+    div {
       background-color: $voscuro;
       padding: 10px;
       border-radius: 3px;
@@ -116,31 +124,29 @@ section {
   p {
     text-align: center;
   }
-  form{
+  
+  form {
     padding: 10px;
     margin: auto;
     display: flex;
     flex-direction: column;
-    width: 500px;
-
-    
-    
-    .form-group{
+    width: 50%; /* Cambiado de 500px a 100% */
+    .form-group {
       margin-top: 20px;
-
     }
-    button{
-        margin-top: 20px;
-        background-color: #fff;
-        border: 3px solid #fff;
-        color: $voscuro;
+    
+    button {
+      margin-top: 20px;
+      background-color: #fff;
+      border: 3px solid #fff;
+      color: $voscuro;
+      transition: 0.5s;
+      
+      &:hover {
+        background-color: $voscuro;
+        color: #fff;
         transition: 0.5s;
-        &:hover{
-          background-color: $voscuro;
-          color: #fff;
-          transition: 0.5s;
-        }
+      }
     }
   }
-  
 }

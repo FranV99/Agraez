@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agráez - Admin - Encargos</title>
+    <link rel="stylesheet" href="../../css/styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../../fontawesome/css/all.css" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div id="client-page">
+      <div class="container-flex">
+        <div class="row">
+          <div class="col">
+            <h3>Encargos</h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col col-sm-2" id="profile-menu">
+            <div class="row">
+              <div class="col">
+                <img src="../../img/user.webp" alt="" />
+                <div id="nombreUsuario">Paco</div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col" id="opciones-menu">
+                <a href="../client/parcelas.html">Mis parcelas</a>
+                <a href="#" style="background-color: lightgreen;">Mis pedidos</a>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col" id="footer-menu">
+                <a href=""><i class="fa-solid fa-gear"></i></a>
+                <a href="../../index.html"
+                  ><i class="fa-solid fa-right-from-bracket"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+          <div class="col col-sm-10" id="content">
+            <div id="pedidos">
+              <h4>Mis pedidos</h4>
+              <div id="tabla-pedidos">
+                <table>
+                    <thead>
+                    <tr id="fila1">
+                        <th>ID</th>
+                        <th>Parcela</th>
+                        <th>Servicios</th>
+                        <th>Fecha Inicio</th>
+                        <th>Fecha Fin</th>
+                        <th>Estado</th>
+                        <th>Razón</th>
+                    </tr>
+                    </thead>
+                    <tbody id="tbody-pedidos">
+                    <tr>
+                        <td>1</td>
+                        <td>Finca La Guapa</td>
+                        <td>
+                            <ul>
+                                <li>Poda</li>
+                                <li>Injerto</li>
+                            </ul>
+                        </td>
+                        <td>10-7-2023</td>
+                        <td>20-7-2023</td>
+                        <td>Finalizado</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Finca Guantanamo</td>
+                        <td>
+                            <ul>
+                                <li>Injerto</li>
+                            </ul>
+                        </td>
+                        <td>18-7-2023</td>
+                        <td></td>
+                        <td>Pendiente</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Finca Guantanamo</td>
+                        <td>
+                            <ul>
+                                <li>Fumigación</li>
+                            </ul>
+                        </td>
+                        <td>18-7-2023</td>
+                        <td></td>
+                        <td>Rechazado</td>
+                        <td>Falta de personal</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Finca Guantanamo</td>
+                        <td>
+                            <ul>
+                                <li>Poda</li>
+                            </ul>
+                        </td>
+                        <td>18-7-2023</td>
+                        <td>28-7-2023</td>
+                        <td>Aceptado</td>
+                        <td></td>
+                    </tr>
+                    </tbody>
+                </table>
+              </div>
+              <div class="alert alert-danger d-none" role="alert">
+                Rellena todos los campos.
+              </div>                
+              <h4>Añadir pedido</h4>
+              <form id="nuevoPedido">
+                <div class="row">
+                  <div class="col col-sm-3">
+                    <label for="id">ID</label>
+                    <br>
+                    <input type="number" id="idPedido" name="idPedido" disabled/>
+                  </div>
+                  <div class="col col-sm-3">
+                    <label for="selectParcela">Parcela</label>
+                    <br>
+                    <select name="parcela" id="selectParcela">
+                        <option value="">Seleccione una parcela</option>
+                        <option value="Finca La Guapa">Finca La Guapa</option>
+                        <option value="Finca Levante">Finca Levante</option>
+                        <option value="Finca Guantanamo">Finca Guantanamo</option>
+                    </select>
+                  </div>
+                  <div class="col col-sm-3">
+                    <label for="serviciosPedido">Servicios</label>
+                    <br>
+                    <ul id="serviciosPedido" style="list-style: none;">
+                        <li>
+                          <label><input type="checkbox" name="servicios" value="Poda"> Poda</label>
+                        </li>
+                        <li>
+                          <label><input type="checkbox" name="servicios" value="Injerto"> Injerto</label>
+                        </li>
+                        <li>
+                          <label><input type="checkbox" name="servicios" value="Fumigación"> Fumigación</label>
+                        </li>
+                        <li>
+                          <label><input type="checkbox" name="servicios" value="Recogida"> Recogida</label>
+                        </li>
+                    </ul>
+                  </div>
+                  <div class="col col-sm-3">
+                    <label for="fechaInicioPedido">Fecha inicio</label>
+                    <br>
+                    <input type="date" id="fechaInicioPedido" name="fechaInicioPedido"></input>
+                  </div>
+                </div>
+                
+                <input type="submit" value="Añadir" id="añadirPedido" />
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col" id="footer">footer</div>
+        </div>
+      </div>
+    </div>
+    <script src="../../js/add_pedido.js"></script>
+  </body>
+</html>

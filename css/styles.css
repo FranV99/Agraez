@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
 header {
   padding: 10px;
@@ -97,7 +98,7 @@ section h3 {
 }
 @media (max-width: 545px) {
   #section-img .parallax div {
-    margin-left: 120px;
+    margin-left: 50px; /* Cambiado de 120px a 0 */
   }
 }
 
@@ -149,7 +150,7 @@ section h3 {
 }
 @media (max-width: 545px) {
   #section-services .cards-services {
-    margin-left: 120px;
+    margin-left: 25px; /* Cambiado de 120px a 0 */
   }
 }
 
@@ -180,7 +181,7 @@ section h3 {
   margin: auto;
   display: flex;
   flex-direction: column;
-  width: 500px;
+  width: 50%; /* Cambiado de 500px a 100% */
 }
 #section-contact form .form-group {
   margin-top: 20px;
@@ -610,6 +611,11 @@ footer #social {
   margin: 30px 0px 30px 30px;
   display: inline-block;
 }
+@media (max-width: 475px) {
+  #admin-page #novedades {
+    margin: 0;
+  }
+}
 #admin-page #novedades .card {
   margin: 0px 0px 20px 45px;
 }
@@ -627,6 +633,14 @@ footer #social {
   margin: 10px;
   height: 600px;
   max-height: 600px;
+}
+@media (max-width: 475px) {
+  #admin-page #servicios,
+  #admin-page #trabajadores,
+  #admin-page #clientes {
+    height: 800px;
+    max-height: 1000px;
+  }
 }
 #admin-page #servicios #tabla-servicios,
 #admin-page #servicios #tabla-trabajadores,
@@ -675,6 +689,26 @@ footer #social {
   top: 0;
   margin: 0;
   background-color: #fff;
+}
+#admin-page #clientes {
+  height: 650px;
+  max-height: 650px;
+}
+@media (max-width: 475px) {
+  #admin-page #clientes {
+    height: 950px;
+    max-height: 950px;
+  }
+}
+#admin-page #trabajadores {
+  height: 700px;
+  max-height: 700px;
+}
+@media (max-width: 475px) {
+  #admin-page #trabajadores {
+    height: 1100px;
+    max-height: 1100px;
+  }
 }
 #admin-page #encargos {
   text-align: left;
@@ -779,6 +813,190 @@ footer #social {
 }
 #admin-page #rechazarEncargo {
   color: red;
+}
+
+#client-page {
+  color: #fff;
+  overflow-x: hidden;
+}
+#client-page #nombreUsuario {
+  text-align: center;
+  margin-top: 5px;
+}
+#client-page h3 {
+  text-align: center;
+  background-color: #1B9421;
+  margin: 0;
+  padding: 10px;
+}
+#client-page h4 {
+  padding-left: 10px;
+}
+#client-page #profile-menu {
+  background-color: #1B9421;
+}
+#client-page #profile-menu img {
+  width: 50%;
+  background-color: #fff;
+  border: 2px solid rgb(195, 195, 195);
+  border-radius: 100%;
+  object-fit: contain;
+  display: block;
+  margin: auto;
+}
+#client-page #profile-menu #opciones-menu {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0px 10px 10px;
+}
+#client-page #profile-menu #opciones-menu a {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #4ea93b;
+  text-decoration: none;
+  color: #fff;
+  border-radius: 20px;
+}
+#client-page #profile-menu #footer-menu {
+  display: flex;
+  justify-content: flex-end;
+}
+#client-page #profile-menu #footer-menu a {
+  text-decoration: none;
+  color: #fff;
+  margin: 10px;
+  font-size: 40px;
+}
+#client-page #content {
+  background-color: #4ea93b;
+  text-align: left;
+}
+#client-page #content h2, #client-page #content h4 {
+  margin-top: 20px;
+  text-align: center;
+}
+#client-page #footer {
+  background-color: black;
+}
+#client-page #novedades {
+  margin: 30px 0px 30px 30px;
+  display: inline-block;
+  text-align: center;
+}
+@media (max-width: 475px) {
+  #client-page #novedades {
+    margin: 0;
+  }
+}
+#client-page #novedades .card {
+  margin: 0px 0px 20px 45px;
+}
+#client-page #novedades a {
+  text-decoration: none;
+  background-color: #4ea93b;
+  color: #fff;
+  padding: 10px;
+  border-radius: 20px;
+}
+#client-page #pedidos {
+  text-align: left;
+  margin: 10px;
+  height: 700px;
+  max-height: 800px;
+}
+@media (max-width: 475px) {
+  #client-page #pedidos {
+    height: 800px;
+    max-height: 800px;
+  }
+}
+#client-page #pedidos #tabla-pedidos {
+  max-height: 300px;
+  overflow: auto;
+}
+#client-page #pedidos table {
+  margin: 10px;
+  padding: 10px;
+  border-radius: 20px;
+  color: #4ea93b;
+  border-collapse: unset;
+  width: 90%;
+  background-color: #fff;
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.1);
+  overflow: auto;
+}
+#client-page #pedidos table tr,
+#client-page #pedidos table th {
+  border-bottom: 1px solid #4ea93b;
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+}
+#client-page #pedidos table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+#client-page #pedidos table #fila1 {
+  position: sticky;
+  top: 0;
+  margin: 0;
+  background-color: #fff;
+}
+#client-page #parcelas {
+  padding: 20px;
+}
+#client-page #parcelas .card {
+  margin-top: 20px;
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.1);
+}
+#client-page #parcelas .card h5 {
+  margin-left: 10px;
+}
+#client-page #parcelas .card img {
+  width: 40%;
+  display: block;
+  margin: auto;
+}
+#client-page #parcelas .card a i {
+  color: #4ea93b;
+  font-size: 25px;
+}
+#client-page #nuevoParcela,
+#client-page #nuevoPedido {
+  padding: 10px;
+}
+#client-page #nuevoParcela div,
+#client-page #nuevoPedido div {
+  margin-top: 10px;
+}
+#client-page #nuevoParcela input[type=text],
+#client-page #nuevoParcela input[type=number],
+#client-page #nuevoParcela textarea,
+#client-page #nuevoPedido input[type=text],
+#client-page #nuevoPedido input[type=number],
+#client-page #nuevoPedido textarea {
+  padding: 10px 20px;
+  box-sizing: border-box;
+}
+#client-page #nuevoParcela input,
+#client-page #nuevoParcela textarea,
+#client-page #nuevoPedido input,
+#client-page #nuevoPedido textarea {
+  border-radius: 8px;
+}
+#client-page #nuevoParcela #añadirParcela,
+#client-page #nuevoParcela #añadirPedido,
+#client-page #nuevoPedido #añadirParcela,
+#client-page #nuevoPedido #añadirPedido {
+  padding: 10px;
+  background-color: #fff;
+  transition: 0.5s;
+}
+#client-page #nuevoParcela #añadirParcela:hover,
+#client-page #nuevoParcela #añadirPedido:hover,
+#client-page #nuevoPedido #añadirParcela:hover,
+#client-page #nuevoPedido #añadirPedido:hover {
+  transition: 0.5s;
+  background-color: #78FF7F;
 }
 
 html {
