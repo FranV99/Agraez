@@ -989,7 +989,7 @@ footer #social {
 #client-page #nuevoPedido #añadirPedido {
   padding: 10px;
   background-color: #fff;
-  color: black;
+  color: #4ea93b;
   transition: 0.5s;
 }
 #client-page #nuevoParcela #añadirParcela:hover,
@@ -997,6 +997,7 @@ footer #social {
 #client-page #nuevoPedido #añadirParcela:hover,
 #client-page #nuevoPedido #añadirPedido:hover {
   transition: 0.5s;
+  color: #fff;
   background-color: #78FF7F;
 }
 

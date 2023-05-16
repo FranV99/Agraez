@@ -170,10 +170,11 @@
     #añadirPedido {
       padding: 10px;
       background-color: #fff;
-      color:black;
+      color: $vnormal;
       transition: 0.5s;
       &:hover {
         transition: 0.5s;
+        color: #fff;
         background-color: $vclaro;
       }
     }
