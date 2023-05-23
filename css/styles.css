@@ -44,22 +44,22 @@ header #log-reg-buttons a {
   padding: 10px;
   transition: 0.5s;
 }
-header #log-reg-buttons #login-button {
+header #log-reg-buttons #register-button {
   border: 3px solid #1B9421;
   background-color: #1B9421;
 }
-header #log-reg-buttons #login-button:hover {
+header #log-reg-buttons #register-button:hover {
   background-color: white;
   color: #1B9421;
   transition: 0.5s;
 }
-header #log-reg-buttons #register-button {
+header #log-reg-buttons #login-button {
   color: #1B9421;
   border: 3px solid #fff;
   background-color: #fff;
   padding: 10px 20px 10px 17px;
 }
-header #log-reg-buttons #register-button:hover {
+header #log-reg-buttons #login-button:hover {
   border: 3px solid #1B9421;
   background-color: #1B9421;
   color: #fff;

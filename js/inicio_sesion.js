@@ -10,7 +10,7 @@ formulario.addEventListener("submit", (event) => {
       console.log("El nombre es:", uNombre.value);
       console.log("La clave es:", uClave.value);
       window.location.href = "../html/admin/index.html";
-    } else if(uNombre.value === "peo" && uClave.value === "peo"){
+    } else if(uNombre.value === "client" && uClave.value === "client"){
         console.log("El nombre es:", uNombre.value);
         console.log("La clave es:", uClave.value);
         window.location.href = "../html/client/index.html";

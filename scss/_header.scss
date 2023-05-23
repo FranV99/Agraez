@@ -48,7 +48,7 @@ header {
       padding: 10px;
       transition: 0.5s;
     }
-    #login-button {
+    #register-button {
       border: 3px solid $voscuro;
       background-color: $voscuro;
       &:hover {
@@ -58,7 +58,7 @@ header {
       }
     }
 
-    #register-button {
+    #login-button {
       color: $voscuro;
       border: 3px solid #fff;
       background-color: #fff;
