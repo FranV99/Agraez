@@ -24,12 +24,12 @@ header ul li {
 }
 header ul li a {
   text-decoration: none;
-  color: #1B9421;
+  color: #1b9421;
   padding: 10px;
   transition: 0.5s;
 }
 header ul li a:hover {
-  border-bottom: 3px solid #1B9421;
+  border-bottom: 3px solid #1b9421;
 }
 header #log-reg-buttons {
   padding: 10px;
@@ -45,23 +45,23 @@ header #log-reg-buttons a {
   transition: 0.5s;
 }
 header #log-reg-buttons #register-button {
-  border: 3px solid #1B9421;
-  background-color: #1B9421;
+  border: 3px solid #1b9421;
+  background-color: #1b9421;
 }
 header #log-reg-buttons #register-button:hover {
   background-color: white;
-  color: #1B9421;
+  color: #1b9421;
   transition: 0.5s;
 }
 header #log-reg-buttons #login-button {
-  color: #1B9421;
+  color: #1b9421;
   border: 3px solid #fff;
   background-color: #fff;
   padding: 10px 20px 10px 17px;
 }
 header #log-reg-buttons #login-button:hover {
-  border: 3px solid #1B9421;
-  background-color: #1B9421;
+  border: 3px solid #1b9421;
+  background-color: #1b9421;
   color: #fff;
   transition: 0.5s;
 }
@@ -133,16 +133,16 @@ section h3 {
 }
 #section-services .cards-services a {
   text-decoration: none;
-  background-color: #1B9421;
+  background-color: #1b9421;
   color: #fff;
   padding: 10px;
   border-radius: 8px;
-  border: 3px solid #1B9421;
+  border: 3px solid #1b9421;
   transition: 0.5s;
 }
 #section-services .cards-services a:hover {
   transition: 0.5s;
-  color: #1B9421;
+  color: #1b9421;
   background-color: #fff;
 }
 #section-services .cards-services .card-body {
@@ -162,7 +162,7 @@ section h3 {
   padding: 10px;
 }
 #section-faqs details div {
-  background-color: #1B9421;
+  background-color: #1b9421;
   padding: 10px;
   border-radius: 3px;
   color: #fff;
@@ -170,7 +170,7 @@ section h3 {
 
 #section-contact {
   padding-top: 20px;
-  background-color: #1B9421;
+  background-color: #1b9421;
   color: #fff;
 }
 #section-contact p {
@@ -190,11 +190,11 @@ section h3 {
   margin-top: 20px;
   background-color: #fff;
   border: 3px solid #fff;
-  color: #1B9421;
+  color: #1b9421;
   transition: 0.5s;
 }
 #section-contact form button:hover {
-  background-color: #1B9421;
+  background-color: #1b9421;
   color: #fff;
   transition: 0.5s;
 }
@@ -210,7 +210,7 @@ footer p {
 footer a {
   text-decoration: none;
   font-size: 30px;
-  color: #1B9421;
+  color: #1b9421;
   margin: 5px;
 }
 footer #social {
@@ -230,9 +230,9 @@ footer #social {
   position: fixed;
   bottom: 10px;
   right: 10px;
-  color: #1B9421;
+  color: #1b9421;
   background-color: white;
-  border: 3px solid #1B9421;
+  border: 3px solid #1b9421;
   border-radius: 100%;
   font-size: 30px;
   padding: 10px 15px 10px 15px;
@@ -325,7 +325,7 @@ footer #social {
 }
 #login-register .btn {
   width: 150px;
-  background-color: #1B9421;
+  background-color: #1b9421;
   border: none;
   outline: none;
   height: 49px;
@@ -357,7 +357,7 @@ footer #social {
   top: -10%;
   right: 48%;
   transform: translateY(-50%);
-  background-image: linear-gradient(-45deg, #15771a 0%, #1B9421 100%);
+  background-image: linear-gradient(-45deg, #15771a 0%, #1b9421 100%);
   transition: 1.8s ease-in-out;
   border-radius: 50%;
   z-index: 6;
@@ -549,21 +549,23 @@ footer #social {
 }
 
 #admin-page {
-  color: #fff;
+  color: #fb5711;
   overflow-x: hidden;
 }
 #admin-page #nombreUsuario {
+  color: #ffffff;
   text-align: center;
   margin-top: 5px;
 }
 #admin-page h3 {
   text-align: center;
-  background-color: #fb5711;
+  color: #f2f2f2;
+  background-color: #ff7c31;
   margin: 0;
   padding: 10px;
 }
 #admin-page #profile-menu {
-  background-color: #fb5711;
+  background-color: #ff7c31;
 }
 #admin-page #profile-menu img {
   width: 50%;
@@ -582,10 +584,11 @@ footer #social {
 #admin-page #profile-menu #opciones-menu a {
   margin-top: 20px;
   padding: 10px;
-  background-color: #ff7c31;
+  background-color: #ffffff;
   text-decoration: none;
-  color: #fff;
+  color: #fb5711;
   border-radius: 20px;
+  text-align: center;
 }
 #admin-page #profile-menu #footer-menu {
   display: flex;
@@ -598,7 +601,7 @@ footer #social {
   font-size: 40px;
 }
 #admin-page #content {
-  background-color: #ff7c31;
+  background-color: #fff;
   text-align: center;
 }
 #admin-page #content h2 {
@@ -630,7 +633,7 @@ footer #social {
 #admin-page #trabajadores,
 #admin-page #clientes {
   text-align: left;
-  margin: 10px;
+  margin: 20px;
   height: 600px;
   max-height: 600px;
 }
@@ -653,6 +656,8 @@ footer #social {
 #admin-page #clientes #tabla-clientes {
   max-height: 300px;
   overflow: auto;
+  border: 2px solid #fb5711;
+  border-radius: 20px;
 }
 #admin-page #servicios table,
 #admin-page #trabajadores table,
@@ -721,6 +726,8 @@ footer #social {
 #admin-page #encargos #tabla-encargos-rechazados {
   max-height: 300px;
   overflow: auto;
+  border: 2px solid #fb5711;
+  border-radius: 20px;
 }
 #admin-page #encargos table {
   margin: 10px;
@@ -823,17 +830,21 @@ footer #social {
   text-align: center;
   margin-top: 5px;
 }
+#client-page h2 {
+  color: #000000;
+}
 #client-page h3 {
   text-align: center;
-  background-color: #1B9421;
+  background-color: #1b9421;
   margin: 0;
   padding: 10px;
 }
 #client-page h4 {
+  color: #000000;
   padding-left: 10px;
 }
 #client-page #profile-menu {
-  background-color: #1B9421;
+  background-color: #1b9421;
 }
 #client-page #profile-menu img {
   width: 50%;
@@ -852,10 +863,11 @@ footer #social {
 #client-page #profile-menu #opciones-menu a {
   margin-top: 20px;
   padding: 10px;
-  background-color: #4ea93b;
+  background-color: #ffffff;
   text-decoration: none;
-  color: #fff;
+  color: #1b9421;
   border-radius: 20px;
+  text-align: center;
 }
 #client-page #profile-menu #footer-menu {
   display: flex;
@@ -868,11 +880,11 @@ footer #social {
   font-size: 40px;
 }
 #client-page #content {
-  background-color: #4ea93b;
+  background-color: #ffffff;
   text-align: left;
 }
 #client-page #content h2, #client-page #content h4 {
-  margin-top: 20px;
+  margin-top: 35px;
   text-align: center;
 }
 #client-page #footer {
@@ -889,11 +901,12 @@ footer #social {
   }
 }
 #client-page #novedades .card {
-  margin: 0px 0px 20px 45px;
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.1);
+  margin: 0px 0px 45px 45px;
 }
 #client-page #novedades a {
   text-decoration: none;
-  background-color: #4ea93b;
+  background-color: #ffffff;
   color: #fff;
   padding: 10px;
   border-radius: 20px;
@@ -918,7 +931,7 @@ footer #social {
   margin: 10px;
   padding: 10px;
   border-radius: 20px;
-  color: #4ea93b;
+  color: #ffffff;
   border-collapse: unset;
   width: 90%;
   background-color: #fff;
@@ -927,7 +940,7 @@ footer #social {
 }
 #client-page #pedidos table tr,
 #client-page #pedidos table th {
-  border-bottom: 1px solid #4ea93b;
+  border-bottom: 1px solid #ffffff;
   padding: 10px;
   margin: 10px;
   text-align: center;
@@ -957,7 +970,7 @@ footer #social {
   margin: auto;
 }
 #client-page #parcelas .card a i {
-  color: #4ea93b;
+  color: #ffffff;
   font-size: 25px;
 }
 #client-page #nuevoParcela,
@@ -989,7 +1002,7 @@ footer #social {
 #client-page #nuevoPedido #añadirPedido {
   padding: 10px;
   background-color: #fff;
-  color: #4ea93b;
+  color: #ffffff;
   transition: 0.5s;
 }
 #client-page #nuevoParcela #añadirParcela:hover,
@@ -998,7 +1011,7 @@ footer #social {
 #client-page #nuevoPedido #añadirPedido:hover {
   transition: 0.5s;
   color: #fff;
-  background-color: #78FF7F;
+  background-color: #78ff7f;
 }
 
 html {

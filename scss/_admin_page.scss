@@ -2,20 +2,23 @@
 
 // Titulo
 #admin-page {
-  color: #fff;
+  color: $foscuro;
   overflow-x: hidden;
   #nombreUsuario {
+    color: #ffffff;
     text-align: center;
     margin-top: 5px;
   }
   h3 {
     text-align: center;
-    background-color: $foscuro;
+    color: #f2f2f2;
+    background-color: $fclaro;
     margin: 0;
     padding: 10px;
   }
+
   #profile-menu {
-    background-color: $foscuro;
+    background-color: $fclaro;
     img {
       width: 50%;
       background-color: #fff;
@@ -33,10 +36,11 @@
       a {
         margin-top: 20px;
         padding: 10px;
-        background-color: $fclaro;
+        background-color: #ffffff;
         text-decoration: none;
-        color: #fff;
+        color: $foscuro;
         border-radius: 20px;
+        text-align: center;
       }
     }
     #footer-menu {
@@ -51,7 +55,7 @@
     }
   }
   #content {
-    background-color: $fclaro;
+    background-color: #fff;
     text-align: center;
     h2 {
       margin-top: 20px;
@@ -84,7 +88,7 @@
   #trabajadores,
   #clientes {
     text-align: left;
-    margin: 10px;
+    margin: 20px;
     height: 600px;
     max-height: 600px;
 
@@ -99,6 +103,8 @@
     #tabla-clientes {
       max-height: 300px;
       overflow: auto;
+      border: 2px solid $foscuro;
+      border-radius: 20px;
     }
     table {
       margin: 10px;
@@ -161,6 +167,8 @@
     #tabla-encargos-rechazados {
       max-height: 300px;
       overflow: auto;
+      border: 2px solid $foscuro;
+      border-radius: 20px;
     }
     table {
       margin: 10px;
